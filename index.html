@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>初めてのmBaaS</title>
+</head>
+<script type="text/javascript" src="ncbm.min.js" charset="UTF-8"></script>
+<script>
+    var ncbm = new NCBM("e6a03d293f42345df8a8efad948c1c88f5892d2a012a6aced29b4a1d34eabe2c", "3a52140f90f43aa2fdbf1f5a13dfd5c651e596e26981bc3e495588cc65ab54a7");
+
+    var TestClass = ncbm.DataStore("TastClass");
+
+    var testClass = new TestClass();
+    testClass.set("message", "Hello, NCMB!");
+    testClass.save()
+    .then(function(){
+        //保存に成功した場合の処理
+    })
+    .catch(function(){
+        //保存に失敗した場合の処理
+    })
+</script>
+<body>
+    
+</body>
+</html>
