@@ -14,10 +14,11 @@
     testClass.set("message", "Hello, NCMB!");
     testClass.save()
     .then(function(){
-        //保存に成功した場合の処理
+        alert("送信完了");
     })
-    .catch(function(){
-        //保存に失敗した場合の処理
+    .catch(function(err)
+    {
+        console.log(err);
     })
 </script>
 </html>
